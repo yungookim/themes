@@ -1,4 +1,4 @@
-nestmob-themes
+Themes for Nestmob
 ==============
 
-Themes for nestmob
+Source codes for various themes offered by Nestmob.
