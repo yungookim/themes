@@ -1,0 +1,88 @@
+#main_container
+{
+height:30px;
+}
+
+	.email-form
+	{
+	z-index:300;
+	position:absolute;
+	background-color:white;
+	padding-top:10px;
+	padding-right:5px;
+	}
+	.email-form-active
+	{
+        -webkit-box-shadow: 3px 4px 2px 0 rgba(0, 0, 0, .1)
+        -moz-box-shadow:  3px 4px 2px 0 rgba(0, 0, 0, .1);
+        box-shadow:  3px 4px 2px 0 rgba(0, 0, 0, .1)
+	}
+
+		#email_msg_box
+		{
+		margin-top:10px;
+		}
+
+			#email_msg
+			{
+			width:500px;
+			}
+				.add-on
+				{
+				margin-right:-5px !important;
+				}
+	.add-this-box
+	{
+	height:30px;
+	margin-top:5px;
+	}
+	
+	.ig-container
+	{
+	/** margin-top:20px !important; **/
+	}
+
+.thumbnail-gallery-wrapper
+{
+	overflow:hidden;
+	margin-left:20px;
+	height:190px;
+	padding:19px;
+	margin-bottom:20px;
+}
+
+	.thumb-wrapper{margin-left:0;}
+	.pic-item
+	{
+	border:0 !important;
+        -webkit-box-shadow:  0px 0px 0px 0px rgba(0, 0, 0, 0);
+        -moz-box-shadow:  0px 0px 0px 0px rgba(0, 0, 0, 0);
+        box-shadow:  0px 0px 0px 0px rgba(0, 0, 0, 0);
+	}
+	
+	.thumbnail-wrapper
+	{
+	margin-left:0;
+	}
+
+/*Overrides. Overriding indirectly does not work due to JS*/
+.modal
+{
+	overflow:hidden;
+	left:41%;
+	width:800px !important;
+	top:45%;
+}
+	.modal.fade.in {top:40%;}
+	.modal-body
+	{
+		max-width:800px !important;
+		max-height:600px !important;
+		max-width:800px !important;
+		padding:0;
+	}
+	
+	.carousel
+	{
+		margin-bottom:0;
+	}
