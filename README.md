@@ -41,9 +41,9 @@ You must follow our standards in order to be compatible with our system.
 * No override of Bootstrap class is allowed.
 
 * In case you need to override a class from Bootstrap, simply use !important delarations (Your !important overrides our's).
-'''html
+```html
 <div class="well ig-extra"> content </div>
-'''
+```
 ```css
 .ig-extra{
 	width:220px !important;
