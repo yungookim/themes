@@ -36,11 +36,20 @@ You must follow our standards in order to be compatible with our system.
 * Twitter's Bootstrap(v2.0.3) is enabled by default.
 
 * Every css classes have to have "ig-" prepended to their names to avoid any possible conflict with NestMob's classes. 
-	* eg. .ig-well instead if .well
+	* eg. .ig-foo instead of .foo
 
 * No override of Bootstrap class is allowed.
 
 * In case you need to override a class from Bootstrap, simply use !important delarations (Your !important overrides our's).
+'''html
+<div class="well ig-extra"> content </div>
+'''
+```css
+.ig-extra{
+	width:220px !important;
+	background-color:red !important;
+}
+```
 
 
 ## Javascripts
