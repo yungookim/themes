@@ -25,8 +25,7 @@ You must follow our standards in order to be compatible with our system.
 
 ## Variables
 
-* Google Map - At render, an element with id="google_map" will be filled with a google map. 
-	All you have to do is define the width and height and you are all set to go. 
+* Google Map - At render, an element with id="google_map" will be filled with a google map. All you have to do is define the width and height and we take care of the rest.
 
 ## Images
 
