@@ -36,7 +36,7 @@ You must follow our standards in order to be compatible with our system.
 * Twitter's Bootstrap(v2.0.3) is enabled by default.
 
 * Every css classes have to have "ig-" prepended to their names to avoid any possible conflict with NestMob's classes. 
-    eg. .ig-well instead if .well
+	* eg. .ig-well instead if .well
 
 * No override of Bootstrap class is allowed.
 
