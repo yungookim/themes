@@ -25,11 +25,32 @@ You must follow our standards in order to be compatible with our system.
 
 ## Variables
 
+* Google Map - At render, an element with id="google_map" will be filled with a google map. All you have to do is define the width and height and we take care of the rest.
+
 ## Images
 
 ## Fonts
 
 ## CSS
+
+* Twitter's Bootstrap(v2.0.3) is enabled by default.
+
+* Every css classes have to have "ig-" prepended to their names to avoid any possible conflict with NestMob's classes. 
+	* eg. .ig-foo instead of .foo
+
+* No override of Bootstrap class is allowed.
+
+* In case you need to override a class from Bootstrap, simply use !important delarations (Your !important overrides our's).
+```html
+<div class="well ig-extra"> content </div>
+```
+```css
+.ig-extra{
+	width:220px !important;
+	background-color:red !important;
+}
+```
+
 
 ## Javascripts
 
