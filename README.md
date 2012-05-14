@@ -23,6 +23,23 @@ You must follow our standards in order to be compatible with our system.
 
 ## Directory Structure
 
+When a developer is assigned with a theme, Nestmob will create this theme directory for you.
+
+```bash
+/themes/31f2248a-48c4-4537-b5dc-b96ffdf99107
+  METADATA/        # Contains metadata, thumbnails, original designs, etc
+    design.pdf       # Original design from designer
+    package.json     # JSON data which describes this theme
+    preview.jpg      # Full sized 950px(W) by ?px(H) preview of this theme
+    thumbnail.jpg    # Thumbnail sized 280px(W) by 365px(H) preview of this theme
+  default_assets/  # All assets included by NestMob platform itself
+  fonts/           # Font files for your theme
+  img/             # Image files for your theme
+  style.css        # CSS file for your theme
+  theme.html       # The main html file
+```
+
+
 ## Variables
 
 * Google Map - At render, an element with id="google_map" will be filled with a google map. All you have to do is define the width and height and we take care of the rest.
