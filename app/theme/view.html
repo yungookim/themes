@@ -1,0 +1,112 @@
+<div class="row ig_main ig-background container">
+	<div class="span11 ig-marginer">
+			<h1 style="font-size:1.3em">
+				<span class="ig-addr-header">{{street_1}}, {{street_2}}</span>
+				<span class="ig-city-header">{{city}}, {{province}}</span>
+			</h1>
+
+		<div class="row"><div class="span11 ig-header-divider"></div></div>
+
+		<div class="row">
+			<div class="span4 ig-brief">
+				<h1 class="ig-capitalize" style="color:rgb(236,0,140);">{{property_type}}</h1>
+				<img class="ig-building" src="Condominium.png">
+				<h2 style="color:white;">${{price}}</h2>
+				<div class="ig-brackets-wrapper" >
+					<div class="row ig-brackets" >
+						<div style="margin-left:90px; width:160px;">
+							<h3 style="color:rgb(236,0,140);">{{property_style}}</h3>
+							<span class="ig-features-content" >
+							<table style="width:200px;text-align:left;">
+								<tr><td>Floor</td><td>{{storey}}</td></tr>
+								<tr><td>Built</td><td>{{age}}</td></tr>
+								<tr><td>Heating</td><td>{{heating}}</td></tr>
+							</table>
+							
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="span6" style="border-left:3px white dashed;width:500px;margin-bottom:20px;">
+				<div class="ig-description-box">
+					<div class="row">
+						<div class="span3 ig-price-background">
+							<div class="ig-price-tag">
+							Property Tax <br><br> ${{tax}}</div>
+						</div>
+						
+						<div class="span3">
+							<div class="row ig-extra-info" style="font-size:3em;">
+								Level : {{storey}}
+							</div>
+							<div class="row ig-extra-info" style="padding-left:0; padding-right:0; width:220px; font-size:1.8em;">
+								<div class="pull-left" style="width:140px;">
+								<img style="width:120px;" src="exposure_arrow.png">
+								Exposure : </div>
+								<span style="font-size:3em;bottom:-15px;position:relative;left:-10px;">{{facing}}</span>
+							</div>
+							<div class="row ig-extra-info">
+								<p class="ig-parking-block"><img src="Parking_Icon.png" class="ig-parking-icon">{{parking}}</p>
+							</div>
+						</div>
+						<div class="ig-description">
+							<h4 style="color:rgb(236,0,140);margin-bottom:5px;">Description : </h4>
+							<p>{{&description}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="subdivider"></div>
+
+		<div class="row" style="margin-bottom:50px;">
+			<div class="span4 pull-left" style="margin-left:50px;">
+				<div class="ig-details">
+					<p class="pull-left" style="color:rgb(236,0,140); font-size:1.3em; margin-left:28px; margin-top:10px; margin-bottom:0;">Features</p>
+					<p class="pull-left" style="margin-left:20px;width:200px;color:white;">{{&feature}}</p>
+				</div>
+				
+				<div class="pull-left">
+					<h1 style="font-size:6em;line-height:100px;"><span style="color:rgb(147, 200, 68);">Size</span><span style="color:white;">:</span></h1>
+					<p style="color:white;font-size:4em;font-weight:bold;line-height:30px; font-family:chaparralpro-regular-webfont;">{{land_size_x}} - {{land_size_y}}</p>
+					<p class="pull-left" style="color:white;font-size:2em;line-height:20px">Square Feet</p>
+					
+				</div>
+
+
+			</div>
+
+			<div class="span3">
+				<div class="row">
+					<span>
+						<h3 style="color:rgb(147, 200, 68);">Bedrooms</h3>
+						<h2 style="color:white;">{{rooms}}</h2>
+					</span>
+					<span>
+						<h3 style="color:rgb(147, 200, 68);">Bathrooms</h3>
+						<h2 style="color:white;">{{bathrooms}}</h2>
+					</span>
+				</div>
+				<div style="border:7px solid; border-color:rgb(88,98,109);">
+					<p style="font-size:1.3em;color:rgb(236,0,140);font-weight:bold; margin-top:10px;">Room Details</p>
+					{{#room_details}}
+					<div style="color:white;">
+					<h2>{{room-name}}</h2>
+					<p>{{room-dimension-x-ft}} ft. x {{room-dimension-y-ft}} ft. ( {{room-dimension-x-m}} m x {{room-dimension-y-m}} m)</p>
+					</div>
+					{{/room_details}}
+					<img src="Arrow.png" style="height:50px;width:160px;">
+				</div>
+			</div>
+
+			<div class="span3">
+				<div id="google_map" ></div>
+				
+			</div>
+			
+		</div>
+
+	</div>
+</div>
