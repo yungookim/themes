@@ -21,6 +21,8 @@ var temp =
 //onLoads
 $(function() {
 
+
+
 //Editor model.
 EditorModel = Backbone.Model.extend({
   initialize: function(){},
@@ -402,18 +404,16 @@ EditorModel = Backbone.Model.extend({
 
   
     InfoGraphView = Backbone.View.extend({
-      template : _.template($("#ig-default").html()),
       initialize: function() {
         this.model = property_model;
-        this.render();
+        //this.render();
       },
       render : function() {
-        
-        var template = Hogan.compile(this.template());
+        var template = Hogan.compile($("#ig-default").html());
         var output = template.render(this.model.toJSON());
         $("#infograph_container").html(output);
         //Update the background size
-        $($("#infograph_container").html()).css("background-size", "100% 100%");
+        //$($("#infograph_container").html()).css("background-size", "100% 100%");
         $("#infograph_container").show('slow');
         $("#google_map").html("<a style=color:white>!Google Map Area!</a>");
       }
@@ -421,6 +421,10 @@ EditorModel = Backbone.Model.extend({
 
   var editorview = new EditorView( {el : $("#accordion")});
   var infoGraphview = new InfoGraphView();
+
+  $('#test_btn').bind('click', function(){
+    igfy(infoGraphview);     
+  });
 
   //Bind Keys for 'enter' and ESC events
   //Move this to EditorView later
@@ -477,4 +481,10 @@ function getCurrentTime(){
     minutes = "0" + minutes;
   }
   return year + "/" + month + "/" + day + " " + hours + ":" + minutes + ampm;
+}
+
+function igfy(view){
+  $("#source_code").hide('slow');
+  $("#ig-default").html($("#source_code").val()); 
+  view.render();
 }
