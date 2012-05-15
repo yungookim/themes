@@ -92,25 +92,33 @@ EditorModel = Backbone.Model.extend({
       
         defaults : function(){
           return {
-              price : "40000",
-              description : "State of the art facility for education of information technology professionals in electrical and computer engineering, computer science and IT research.",
-              street_1 : "40 St. George Stree",
-              street_2 : "Immediately south of Russell Street",
-              city : "Toronto",
-              postal : "A1B 2C3",
-              country : "Canada",
-              storey : "3",
-              property_type : "penthouse",
-              rooms : "20 + 3",
-              land_size_x : "100",
-              land_size_y : "100",
-              bathrooms : "32",
-              parking : "30",
-              age : "0-5",
-              heating : "Forced Air",
-              basement : "Finished",
-              tax : "4000",
-              contact : "example@example.com"
+              age: "1",
+              basement: "Finished",
+              bathrooms: "1",
+              city: "Toronto",
+              contact: "Nestmob Message Box",
+              country: "Canada",
+              description: "State of the art facility for education of information technology professionals in electrical and computer engineering, computer science and IT research.",
+              facing: "North",
+              feature: "LuxuryMonarch, Long Driveway, Double Entrance Doors, Greate View.",
+              heating: "Forced Air",
+              land_size_x: "200",
+              land_size_y: "200",
+              lat: 43.7672594,
+              living_size: "1000",
+              lng: -79.41113129999997,
+              parking: "1",
+              postal: "M2N 7K2",
+              price: "500,000",
+              property_style: "Detached",
+              property_type: "House",
+              province: "Ontario",
+              raw_google_map: "",
+              rooms: "2",
+              storey: "3",
+              street_1: "22 Hillcrest Ave",
+              street_2: "",
+              tax: "4000"
             };
         },
 
@@ -400,13 +408,14 @@ EditorModel = Backbone.Model.extend({
         this.render();
       },
       render : function() {
-        console.log(this.template());
+        
         var template = Hogan.compile(this.template());
         var output = template.render(this.model.toJSON());
         $("#infograph_container").html(output);
         //Update the background size
-        //$($("#infograph_container").html()).css("background-size", "100% 100%");
+        $($("#infograph_container").html()).css("background-size", "100% 100%");
         $("#infograph_container").show('slow');
+        $("#google_map").html("<a style=color:white>!Google Map Area!</a>");
       }
     });
 
