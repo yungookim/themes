@@ -1,6 +1,8 @@
 $(function(){
-
-
+	$("#test_hint").hide();
+	$('#test_btn').popover(
+		{ title: "Hint Hint",
+		content:"You can open up the box again by clicking me!"});
 	//Do not need any google map apis
 	//Google Map properties
 	var map = null, marker = null;
@@ -11,50 +13,49 @@ $(function(){
 	$("#google_map_script").remove();
 
 	window.PropertyModel.prototype.initialize = function(){
-		// editorview.render();
-  //       infoGraphview.render();
+		
 	};
-	window.PropertyModel.prototype.fetch = function(){},
+
+	window.PropertyModel.prototype.defaults = function(){
+		return { age: "1",
+				basement: "Finished",
+				bathrooms: "1",
+				city: "Toronto",
+				contact: "Nestmob Message Box",
+				country: "Canada",
+				description: "State of the art facility for education of information technology professionals in electrical and computer engineering, computer science and IT research.",
+				facing: "North",
+				feature: "LuxuryMonarch, Long Driveway, Double Entrance Doors, Greate View.",
+				heating: "Forced Air",
+				land_size_x: "200",
+				land_size_y: "200",
+				lat: 43.7672594,
+				living_size: "1000",
+				lng: -79.41113129999997,
+				parking: "1",
+				postal: "M2N 7K2",
+				price: "500,000",
+				property_style: "Detached",
+				property_type: "House",
+				province: "Ontario",
+				raw_google_map: "",
+				rooms: "2",
+				storey: "3",
+				street_1: "22 Hillcrest Ave",
+				street_2: "",
+				tax: "4000"}
+	},
+
 	window.PropertyModel.prototype.saveAll = function(){
+		console.log(this.toJSON());
 		//ensure all control boxes are closed
         $(".in").css("height", 0).removeClass("in");
         // console.log(this.toJSON());
         //Show saved time
         $("#saving_box").removeClass("hide");
-        infoGraphview.render();
+        window.InfoGraphView.prototype.render();
 	};
-	window.PropertyModel.prototype.defaults = {
-          age: "1",
-          basement: "Finished",
-          bathrooms: "1",
-          city: "Toronto",
-          contact: "Nestmob Message Box",
-          country: "Canada",
-          description: "State of the art facility for education of information technology professionals in electrical and computer engineering, computer science and IT research.",
-          facing: "North",
-          feature: "LuxuryMonarch, Long Driveway, Double Entrance Doors, Greate View.",
-          heating: "Forced Air",
-          land_size_x: "200",
-          land_size_y: "200",
-          lat: 43.7672594,
-          living_size: "1000",
-          lng: -79.41113129999997,
-          parking: "1",
-          postal: "M2N 7K2",
-          price: "500,000",
-          property_style: "Detached",
-          property_type: "House",
-          province: "Ontario",
-          raw_google_map: "",
-          rooms: "2",
-          storey: "3",
-          street_1: "22 Hillcrest Ave",
-          street_2: "",
-          tax: "4000"
-        };
-
-
-	
+		
 	window.EditorView.prototype.events = {
         'click #price_close' : 'updatePrice',
         'click #description_close' : 'updateDescription',
@@ -79,18 +80,27 @@ $(function(){
         'click #contact_close' : 'updateContact'
     };
 
-    window.EditorView.prototype.model = window.PropertyModel.prototype.__proto__;
+    var editor_model = new window.EditorModel();
+    var property_model = new window.PropertyModel();
 
-	window.EditorView.prototype.initialize = function() {
-    	window.EditorView.prototype.render();
+    window.EditorView.prototype.initialize = function() {
+		window.EditorView.prototype.model = property_model;
   	};
+
+    window.EditorView.prototype.render = function(){
+    	var template = Hogan.compile(temp);
+        var output = template.render(editor_model.toJSON());
+        $("#nm-editor").html(output);
+        this.populate();
+    };
 
   	window.EditorView.prototype.searchPostal = function(){}
 
+  	window.InfoGraphView.prototype.model = property_model;
 
 	window.InfoGraphView.prototype.render = function(){
 		var template = Hogan.compile($("#ig-default").html());
-        var output = template.render(window.PropertyModel.model.toJSON());
+        var output = template.render(this.model.toJSON());
         $("#infograph_container").html(output);
         //Update the background size
         //$($("#infograph_container").html()).css("background-size", "100% 100%");
@@ -99,21 +109,28 @@ $(function(){
 	};
 
 	initializeGoogleMap = function(){};
-	// var editor_model = new EditorModel();
- //    var property_model = new PropertyModel();
-	// var editorview = new EditorView( {el : $("#accordion")});
- //  	var infoGraphview = new InfoGraphView();
+	
+	var editorview = new window.EditorView(
+					{
+						el : $("#accordion"),
+						model : property_model
+					});
+   	var infoGraphview = new window.InfoGraphView();
 
  	$("#test_btn").bind("click", function(){
- 		igfy();
+ 		if ($("#source_code").is(":visible")){
+ 			igfy();	
+ 		} else {
+ 			$("#source_code").show('slow');	
+ 		}
  	});
-
 });
 
 function igfy(){
 	$("#source_code").hide('slow');
 	$("#ig-default").html($("#source_code").val()); 
 	window.EditorView.prototype.render();
+	window.InfoGraphView.prototype.render();
 }
 	
 

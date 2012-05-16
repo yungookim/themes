@@ -105,7 +105,7 @@ EditorModel = Backbone.Model.extend({
           var _curUri =  window.location.pathname.split('/');
           this.id = _curUri[_curUri.length-1];
           this.url = this.url + this.id;
-          //this.fetch();
+          this.fetch();
         },
       //  validate : function (){ /*Implement validation with global lock*/ },
         fetch : function(){
