@@ -1,18 +1,18 @@
 @font-face {
 font-family: 'chaparralpro-regular-webfont';
 src : local('chaparralpro-regular-webfont'), 
-url('chaparralpro-regular-webfont.woff') format('woff'), 
-url('chaparralpro-regular-webfont.ttf') format('truetype'), 
-url('ChaparralPro-Regular.otf') format('opentype'),
-url('chaparralpro-regular-webfont.eot') format('embedded-opentype');
+url('font/chaparralpro-regular-webfont.woff') format('woff'), 
+url('font/chaparralpro-regular-webfont.ttf') format('truetype'), 
+url('font/ChaparralPro-Regular.otf') format('opentype'),
+url('font/chaparralpro-regular-webfont.eot') format('embedded-opentype');
 }
 @font-face {
 font-family: 'helveticaneueltstd';
 src : local('helveticaneueltstd'), 
-url('helveticaneueltstd-roman-webfont.woff') format('woff'), 
-url('helveticaneueltstd-roman-webfont.ttf') format('truetype'), 
-url('HelveticaNeueLTstd-Roman.otf') format('opentype'),
-url('helveticaneueltstd-roman-webfont.eot') format('embedded-opentype');
+url('font/helveticaneueltstd-roman-webfont.woff') format('woff'), 
+url('font/helveticaneueltstd-roman-webfont.ttf') format('truetype'), 
+url('font/HelveticaNeueLTstd-Roman.otf') format('opentype'),
+url('font/helveticaneueltstd-roman-webfont.eot') format('embedded-opentype');
 }
 
 .ig-background
@@ -25,7 +25,7 @@ url('helveticaneueltstd-roman-webfont.eot') format('embedded-opentype');
 	margin-top:10px;
 	margin-bottom:30px;
 	margin-left:50px;
-	background-image : url(Bar.png);
+	background-image : url(img/Bar.png);
 	background-repeat:no-repeat;
 	background-size:810px 30px;
 	height:30px;
@@ -64,7 +64,7 @@ url('helveticaneueltstd-roman-webfont.eot') format('embedded-opentype');
 
 		.ig-brackets-wrapper
 		{
-			background-image:url(brackets.png);
+			background-image:url(img/brackets.png);
 			background-repeat:no-repeat;
 			background-size:250px 150px;
 			margin-left:20px!important;
@@ -125,7 +125,7 @@ url('helveticaneueltstd-roman-webfont.eot') format('embedded-opentype');
 		width:150px;
 	}
 	.ig-price-background{
-			background-image:url(Price_Tag.png);
+			background-image:url(img/Price_Tag.png);
 			background-repeat:no-repeat;
 			background-size:180px 320px;
 			height:320px;
@@ -189,7 +189,7 @@ url('helveticaneueltstd-roman-webfont.eot') format('embedded-opentype');
 }
 
 .ig-details{
-	background-image:url(Existing.png);
+	background-image:url(img/Existing.png);
 	background-repeat:no-repeat;
 	background-size:250px 150px;
 	height:160px;

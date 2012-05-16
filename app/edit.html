@@ -4,7 +4,7 @@
 </head>
 <body>
 <div class="well">
-	<img src="img/top_logo.png"/>
+	<img src="lib/img/top_logo.png"/>
 	<button id="test_btn" class="btn" style="font-weight:bold; margin-left:100px;"><i class="icon-edit"></i>Test!</button>
 	<br><br>
 	<p>Copy and Paste template's source code into the box below and click Test!</p>
@@ -209,19 +209,29 @@
 		<input id="data-contact" class="span4 input-xlarge" placeholder="Phone number or alternative email?">
 	</script>
 	
-<link href="css/ext/bootstrap/bootstrap-min.css" rel="stylesheet"/>
-<link href="css/property_editor.css" rel="stylesheet"/>
+<link href="lib/css/ext/bootstrap/bootstrap-min.css" rel="stylesheet"/>
+<link href="lib/css/property_editor.css" rel="stylesheet"/>
 <link href="theme/style.css" rel="stylesheet"/>
-<script src="js/ext/jquery.1.7.1-min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/ext/bootstrap.2.0.0-min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/ext/jquery-ui-1.8.19.custom.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/ext/underscore.1.3.1-min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/ext/backbone.0.9.1-min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/ext/hogan-min.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/property_editor.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/local_editor.js" type="text/javascript" charset="utf-8"></script>
-<script src="js/ext/humanize.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/js/ext/jquery.1.7.1-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/js/ext/bootstrap.2.0.0-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/js/ext/jquery-ui-1.8.19.custom.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/js/ext/underscore.1.3.1-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/js/ext/backbone.0.9.1-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/js/ext/hogan-min.js" type="text/javascript" charset="utf-8"></script>
 
+<script src="lib/js/property_editor.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript">
+	$.holdReady(true);
+</script>
+
+
+<script src="lib/js/editor_extension.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="lib/js/ext/humanize.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+	$.holdReady(false);
+</script>
 
 </body>
 </html>
