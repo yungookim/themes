@@ -54,3 +54,6 @@ You must follow our standards in order to be compatible with our system.
 
 ## Javascripts
 
+* Currently, no javascripts are allowed in NestMob templates.
+
+
