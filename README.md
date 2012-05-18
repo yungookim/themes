@@ -75,3 +75,6 @@ When a developer is assigned with a theme, Nestmob will create this theme direct
 
 ## Javascripts
 
+* Currently, no javascripts are allowed in NestMob templates.
+
+

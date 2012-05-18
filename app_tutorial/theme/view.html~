@@ -1,0 +1,99 @@
+<div class="row ig-main">
+	<!-- This is where the thumbnails of photos go in (Mandatory, styling is optional)-->	
+	<div id="ig-gallery" style="padding-left:20px;"></div>
+
+	<!-- Infograph's width -->
+	<div class="span12">
+		<div class="row">
+			<div class="span3 ig-marginer">
+				<div class="ig-well ig-round">
+					<img src="{{theme_path}}img/tax_icon.png" class="ig-tax-icon">
+					<h1 class="ig-centre">${{tax}}</h1>
+				</div>
+
+				<div class="ig-well ig-round">
+					<h1>
+					<img src="{{theme_path}}img/small_crown.png" class="ig-small_crown">
+					{{property_type}}</h1>
+				</div>
+			</div>
+
+			<div class="span4" style="margin-left:40px;">
+				<div class="ig-well ig-round">
+					<h1>
+						<img src="{{theme_path}}img/bedroom_icon.png" class="icon">
+						<span class="ig-font-alger">{{rooms}}</span>
+					</h1>
+					<h1>
+						<img src="{{theme_path}}img/bathroom_icon.png" class="icon">
+						<span class="ig-font-alger">
+						{{bathrooms}}
+						</span>
+					</h1>
+
+					<h1>
+						<img src="{{theme_path}}img/parking_icon.png" class="icon">
+						<span class="ig-font-alger">
+						{{parking}}
+						</span>
+					</h1>
+				</div>
+				<!-- Google Map (Mandatory)-->
+				<div id="google_map" class="ig-well" style="margin:0;padding:0;"></div>
+			</div>
+
+			<div class="span3" style="margin-left:40px; width:260px;">
+				<div class="ig-well ig-round">
+					<h3 class="ig-common-header">Rooms</h3>
+					{{#room_details}}
+					<p>{{room-name}}, on {{room-storey}} floor  : 
+					<br> {{room-dimension-x-ft}}ft. x {{room-dimension-y-ft}}ft. ({{room-dimension-x-m}}m x {{room-dimension-y-m}}m)</p>
+					{{/room_details}}
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+				<div style="background-color:white;">
+					<table class="table table-striped table-bordered table-condensed">
+						<tr><td>Price</td><td>{{price}}</td></tr>
+						<tr><td>Rooms </td><td>{{rooms}}</td></tr>
+						<tr><td>Description </td><td>{{&description}}</td></tr>
+						<tr><td>Street 1 </td><td>{{street_1}}</td></tr>
+						<tr><td>Street 2</td><td>{{street_2}}</td></tr>
+						<tr><td>City</td><td>{{city}}</td></tr>
+						<tr><td>Postal Code</td><td>{{postal}}</td></tr>
+						<tr><td>Province/state</td><td>{{province}}</td></tr>
+						<tr><td>Country</td><td>{{country}}</td></tr>
+						<tr><td>storey</td><td>{{storey}}</td></tr>
+						<tr><td>Property Type</td><td>{{property_type}}</td></tr>
+						<tr><td>Property Style</td><td>{{property_style}}</td></tr>
+						<tr><td>Rooms</td><td>{{rooms}}</td></tr>
+						<tr><td>Land Size X</td><td>{{land_size_x}}</td></tr>
+						<tr><td>Land Size Y</td><td>{{land_size_y}}</td></tr>
+						<tr><td>Number of Bath Rooms</td><td>{{bathrooms}}</td></tr>
+						<tr><td>Parking</td><td>{{parking}}</td></tr>
+						<tr><td>Age/year Built</td><td>{{age}}</td></tr>
+						<tr><td>Heating</td><td>{{heating}}</td></tr>
+						<tr><td>Basement</td><td>{{basement}}</td></tr>
+						<tr><td>Tax</td><td>{{tax}}</td></tr>
+						<tr><td>Facing</td><td>{{facing}}</td></tr>
+						<tr><td>Features</td><td>{{&feature}}</td></tr>
+						<tr><td>Contact</td><td>{{contact}}</td></tr>
+						<tr><td colspan=2>
+						<div>
+							<h3>Rooms</h3>
+							{{#room_details}}
+							<p>{{room-name}}, on {{room-storey}} floor  : 
+							<br> {{room-dimension-x-ft}}ft. x {{room-dimension-y-ft}}ft. ( {{room-dimension-x-m}}m x {{room-dimension-y-m}} m)</p>
+							{{/room_details}}
+						</div></td>
+						</tr>
+
+					</table>
+				</div>
+
+</div>
+
+

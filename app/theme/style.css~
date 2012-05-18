@@ -1,0 +1,198 @@
+@font-face {
+font-family: 'chaparralpro-regular-webfont';
+src : local('chaparralpro-regular-webfont'), 
+url('font/chaparralpro-regular-webfont.woff') format('woff'), 
+url('font/chaparralpro-regular-webfont.ttf') format('truetype'), 
+url('font/ChaparralPro-Regular.otf') format('opentype'),
+url('font/chaparralpro-regular-webfont.eot') format('embedded-opentype');
+}
+@font-face {
+font-family: 'helveticaneueltstd';
+src : local('helveticaneueltstd'), 
+url('font/helveticaneueltstd-roman-webfont.woff') format('woff'), 
+url('font/helveticaneueltstd-roman-webfont.ttf') format('truetype'), 
+url('font/HelveticaNeueLTstd-Roman.otf') format('opentype'),
+url('font/helveticaneueltstd-roman-webfont.eot') format('embedded-opentype');
+}
+
+.ig-background
+{
+	background-color:rgb(35,31,32);
+}
+
+.ig-header-divider
+{
+	margin-top:10px;
+	margin-bottom:30px;
+	margin-left:50px;
+	background-image : url(img/Bar.png);
+	background-repeat:no-repeat;
+	background-size:810px 30px;
+	height:30px;
+	width:810px !important;
+}
+
+.ig-addr-header
+{
+	font-weight:bold;
+	font-size:30px;
+	color:white;
+}
+
+.ig-city-header
+{
+	font-weight:bold;
+	font-size:40px;
+	color:rgb(147, 200, 68);
+}
+
+.ig-brief
+{
+
+}
+	.ig-capitalize
+	{
+		text-transform:capitalize;
+	}
+
+	.ig-building
+	{
+		width:100px;
+		height:200px;
+		margin-top:10px;
+	}
+
+		.ig-brackets-wrapper
+		{
+			background-image:url(img/brackets.png);
+			background-repeat:no-repeat;
+			background-size:250px 150px;
+			margin-left:20px!important;
+		}
+			.ig-brackets
+			{
+				height:150px;
+				width:250px;
+				margin-right:0;
+				margin-left:-40px !important;
+			}
+
+
+
+	.ig-features
+	{
+		margin-top:20px;
+		color:white;
+		font-size:60px;
+	}
+
+		.ig-features-content
+		{
+			margin-top:10px;
+			font-size:1.2em;
+			color:white;
+			width:200px;
+		}
+
+.ig-description-box
+{
+	margin-top:0;
+	margin-bottom:20px;
+	margin-left:20px;
+	width:470px;
+}
+
+	.ig-description p{
+		border-left:5px solid rgb(170, 211, 107);
+		padding-left:10px;
+	}
+	.ig-description
+	{
+		color:white;
+		width:400px;
+		margin-left:50px;
+		text-align:left;
+	}
+
+	.ig-price-tag
+	{
+		color:white;
+		font-weight:bold;
+		font-size:20px;
+		padding-top:200px;
+		position:relative;
+		text-align:center;
+		width:150px;
+	}
+	.ig-price-background{
+			background-image:url(img/Price_Tag.png);
+			background-repeat:no-repeat;
+			background-size:180px 320px;
+			height:320px;
+	}
+
+	.ig-extra-info
+	{
+		border:solid 5px;
+		border-color:rgb(236, 0, 140);
+		line-height:30px;
+	-webkit-border-radius: 15px;
+	   -moz-border-radius: 15px;
+        	border-radius: 15px;
+		text-align:center;
+		vertical-align:middle;
+		font-size:30px;
+		font-weight:bold;
+		color:white;
+		width:180px;
+		padding:20px;
+		margin:0;
+		margin-top:20px;
+	}
+		.ig-parking-block
+		{
+			line-height:50px;
+			font-weight:bold;
+			font-size:80px;
+			margin-left:0;
+			margin-right:0;
+			margin-bottom:0;
+		}
+		.ig-parking-icon
+		{
+			width:100px;
+			height:60px;
+			margin-left:-20px;
+			margin-right:10px;
+		}		
+		.ig-parking {
+
+		}
+
+.ig-marginer
+{
+	margin-top:20px;
+	margin-bottom:0;
+	text-align:center;
+}
+
+.subdivider
+{
+	border:2px dashed white;
+	margin-bottom:20px;
+}
+
+#google_map{
+	width:260px;
+	height:260px;
+	border:10px solid white;
+}
+
+.ig-details{
+	background-image:url(img/Existing.png);
+	background-repeat:no-repeat;
+	background-size:250px 150px;
+	height:160px;
+	width:250px;
+
+}
