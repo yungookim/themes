@@ -80,8 +80,8 @@ You must follow our standards in order to be compatible with our system.
 
 2. The script tag #ig-default contains a sample template. Please review carefully how images paths are set, how gallery is embedded, and how google map can be embedded.
 	* All image paths are required to be in {{theme_path}}img/IMAGE-NAME.EXT where IMAGE-NAME is the name of the image and EXT is the image type.
-	* To embed a gallery, all you have to do is to place <div id="ig-gallery"></div> tag where appropriate and add css rules as needed.
-	* Embeding Google Map is also very simple. Place <div id="google_map"></div> tag where appropriate and set the preferred width and the height.
+	* To embed a gallery, all you have to do is to place ```<div id="ig-gallery"></div>``` tag where appropriate and add css rules as needed.
+	* Embeding Google Map is also very simple. Place ```<div id="google_map"></div>``` tag where appropriate and set the preferred width and the height.
 
 3. Review the contents in /kit directory which contains all the assets required for the sample. Note that style.css file is required and will be automatically loaded by the app.html.
 
