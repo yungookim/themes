@@ -1,123 +1,161 @@
-<html>
-<head>
-	<link href="default_assets/css/ext/bootstrap/bootstrap-min.css" rel="stylesheet">
-	<link href="default_assets/css/property_viewer.css" rel="stylesheet">
-	<link href="style.css" rel="stylesheet">
-</head>
-<body>
-<div class="row" id="main_container">
-	<div class="row ig-container">	
-		<div id="infograph_container" class="span12">
-<!-- DO NOT MODIFY ABOVE -->
-			
-<div class="row ig_main background" style="background-size:100% 100%;background-image:url('img/background.jpg');">
-	
-	<!-- Thumbnail Gallery BEGIN -->
-	<div id="ig-gallery" style="padding-left:20px;"></div>
-	<!-- Thumbnail Gallery END -->
-
-	<div class="span12" style="margin-left:35px;">
-		<div class="row">
-			<div class="span3 marginer">
-				<div class="igwell col round">
-					<img src="img/tax_icon.png" class="tax-icon">
-					<h1 class="centre"><!--{{tax}} BEGIN-->$3000<!--{{tax}} END--></h1>
-				</div>
-
-				<div class="igwell round" >
-					<h3 class="common-header">Basement:</h3>
-					<h1 class="features">Finished<!--{{basement}}--></h1>
-					<br>	
-					<h3 class="common-header">Style:</h3>
-					<h1 class="features">Detached<!--{{property_type}}--></h1>
-					<h1 class="features">2<!--{{storey}}--> storey</h1>
+	<div class="row">
+		<div class ="span12"  style="margin-left:50px;">
+			<div id="top_header" class ="igwell round">
+				<table style="max-width:900px" border="0"
+				<tr>
+				<td><img src ="{{theme_path}}img/BCITcdnarchphoto.jpg">
+				<td>
+					<table style="max-width:420px" border="0">
+					<tr>
+					<td width="65px">
+					<td><h2 class="address_large">{{street_1}}</h2>
+					</tr>
+					<tr>
+					<td width="65px" height="50px">
+					<td><p class="address_large">{{street_2}}</p>
+					</tr>
+					<tr>
+					<td width="65px" height="50px">
+					<td><p class="address_medium">{{city}}, {{province}}, {{postal}}</p>
+					</tr>
+					</table>					
 					<br>
-					<h3 class="common-header">Heating</h3>
-					<h1 class="features">Forced Air<!--{{heating}}--></h1>
 					<br>
-				</div>
+					<br>
+					<h1 class="price_xlarge">${{price}}</h1>
+					
+
+
+				</tr>
+				</table>
+				 
+			</div> <!-- .top_header-->
+		</div> <!-- .span12-->
 		
-				<div class="igwell round">
-					<h3 class="common-header">Other Stuff:</h3>
-					<p>this house is awesome buy now<!--{{description}}--></p>
+		<div class="span12"  style="margin-left:50px;">
+			<div class="row">
+				<div class="span3">
+					<div class="igwell round" id="bed_parking_washroom_numbers">
+						<table style="max-width:220px" border='0'>
+						<tr>
+						<td width='100px'><img src='{{theme_path}}img/bedrooms.png' class='bedroom_img'>
+						<td width='120px'><h3 class='numbers_medium'>{{rooms}}</h3>
+						</tr>
+						<tr>
+						<td width='100px'><img src='{{theme_path}}img/bathrooms.png' class='bathroom_img'>
+						<td width='120px'><h3 class='numbers_medium'>{{bathrooms}}</h3>
+						</tr>
+						<tr>
+						<td width='100px'><img src='{{theme_path}}img/parking_spaces.png' class='parking_img'>
+						<td width='120px'><h3 class='numbers_medium'>{{parking}}</h3>
+						</tr>
+						</table>
+				
+
+					</div><!--.bedparkingwashroomnumber-->
+
+					<div class="igwell round" id="desc">
+						<img src="{{theme_path}}img/section_break1.png" class="section_break_img">
+						<br>
+						
+						<p class="feature_header">Facing:</p>
+						<br>
+						{{facing}} direction
+						<br>
+						<br>
+						<img src="{{theme_path}}img/section_break2.png" class="section_break_img">
+						<br>
+						<p class="feature_header">Room descriptions:</p>
+						<br>
+
+						{{#room_details}}
+						{{room-name}}, on {{room-storey}} floor  : 
+						<br> {{room-dimension-x-ft}}ft. x {{room-dimension-y-ft}}ft. ( {{room-dimension-x-m}}m x {{room-dimension-y-m}} m)
+						
+
+						{{/room_details}}
+
+						<br>
+						<br>
+						<img src="{{theme_path}}img/section_break1.png" class="section_break_img">
+						<p class="feature_header">Contact info:</p>
+						<br>
+						For more info, please contact
+						<br>
+						{{contact}}
+
+						<br>
+					</div> <!--.desc-->
+
+					<div class="igwell round" id="features">
+						<p class="feature_header">Features:</p>
+						<br>
+						<p class="feature_txt"> 
+						{{&feature}}</p>
+					</div> <!--.features-->
+
+
+
 				</div>
-			</div>
+				<div class="span4">
+					
+					<div id="prpty_info" class="prpty_info round" style="background-image:url('{{theme_path}}img/house_info_v2.png');">
+					<p class="prpty_type_hdr">{{property_type}}</p>
+					<p class="property_style_text"> {{property_style}}</p>
+					<p class="basement_text"> {{basement}}</p>
+					<p class="heating_text"> {{heating}}</p>
+					</div>
 
-			<div class="span4">
-				<div class="igwell round">
-					<h1>
-						<img src="img/bedroom_icon.png" class="icon">
-						3 + 1<!--{{rooms}}-->
-					</h1>
-					<h1>
-						<img src="img/bathroom_icon.png" class="icon">
-						2 + 1<!--{{bathrooms}}-->
-					</h1>
-
-					<h1>
-						<img src="img/parking_icon.png" class="icon">
-						2<!--{{parking}}-->
-					</h1>
+					<div id="landsize" class="prpty_info round">
+						<img src="{{theme_path}}img/land_size.png" class="landsize_txt_img">
+						<br>
+						<img src="{{theme_path}}img/land_shape.png" class="landshape_txt_img">
+						<br>
+						<br>
+						<p class="landsize_txt center"> {{land_size_x}} x {{land_size_y}} </p>
+						<br>
+						<p class="landsize_txt center"> Feet </p>
+					</div>
 				</div>
 
-				<!-- Google Map Begin -->
-				<div id="google_map" class="igwell"></div>
-				<!-- Google Map End -->
-
-				<div class="address centre" style="background-image:url('img/address.png');">
-					<h3><i>12 Yonge Street<!--{{street_1}}--></i></h3>
+				<div class="span5" id="rightmost_col">
+					<div class="age_built" style="background-image:url('{{theme_path}}img/age_box.png');">
+					<h3 class="age_built_hdr_1stline"> Age / Yr </h3>
 					<br>
-					<h1>Toronto<!--{{city}}--></h1>
-					<h4>J31 F2V<!--{{postal}}-->, Canada<!--{{country}}--></h4>
-
-				</div>
-
-			</div>
-
-			<div class="span3" style="width:260px;">
-				<div class="igwell round">
-					<h3 class="common-header">Extras:</h3>
-					<p>Some other descriptions, oiwej foiweh foawie hfwe, fawe,fj awef a,wef awef awefaef
-						awef jawef,awef a,wea ,we fa,wea ,wefa f h ailwhefl aweflaweawea fawef, awefiawhfawha w
-						fawefaw elfalw efehw w;ef aw;efa,wf awefawpwiueal iefualw ifug aifugasdlfjasldfia h
-						<!--{{{description}}}--></p>
-				</div>
+					<h3 class="age_built_hdr_2ndline"> Built: </h3>
+					<p class="age_built_txt"> {{age}} </p>
+					</div>
 		
-				<div class="igwell round">
-					<h3 class="common-header">Land Size:</h3>
-					<h1>120<!--{{land_size_x}}--> X <br>80<!--{{land_size_y}}--> Feet</h1>
-				</div>
+					<div class="igwell round" id="tax">
+						<table border=0 style="max-width:340px">
+						<tr>
+						<Td><img class="tax_img" src="{{theme_path}}img/taxes.png">
+						<br>
+						<img class="calc_img" src="{{theme_path}}img/calculator.png">
+						<td valign="center"><p class="tax_text"> ${{tax}} </p>
+						</tr>
+						</table>
+					</div>
 
-				<div class="igwell round">
-					<img src="img/small_crown.png" class="small_crown">
-					<p>Some more description<!--{{description}}--></p>
-				</div>
+					<!-- Google Map Begin -->
+					<div id="googlemap_area" class="igwell round" > 
 
-				<div class="igwell round">
-					<h3 class="common-header">Features:</h3>
-					<p>Some more description<!--{{description}}--></p>
-				</div>
+						<div id="google_map" >
 
-				<img class="premium_quality tilt" src="img/premium_quality.png" >
-				
-				<br><br>	
-				
-				<h1 class="xlarge tilt">$630,000<!--{{price}}--></h1>
+						</div>
+					
+					
+					
+					</div>
+					<!-- Google Map End -->
+				</div> <!-- rightmost-col-->
 
-				<br><br>
-
-				<div class="age_built" style="background-image:url('img/built_year.png');">
-					<h1 class="age centre">13<!--{{age}}--></h1>
-				</div>
-			</div>
-			
-		</div> <!-- .row -->
-	</div> <!-- .span12 -->
-</div> <!-- .ig_main -->
-
-<!-- DO NOT MODIFY BELOW -->
+			</div>	
 		</div>
+
+	
 	</div>
-</div>
-</body>
-</html>
+
+
+
+

@@ -1,139 +1,316 @@
-.background
+@font-face {
+font-family: 'helveticaneueltstd';
+src : local('helveticaneueltstd'), 
+url('font/helveticaneueltstd-roman-webfont.woff') format('woff'), 
+url('font/helveticaneueltstd-roman-webfont.ttf') format('truetype'), 
+url('font/HelveticaNeueLTstd-Roman.otf') format('opentype'),
+url('font/helveticaneueltstd-roman-webfont.eot') format('embedded-opentype');
+}
+
+
+@font-face {
+font-family: 'acb';
+src : local('acb'), 
+url('font/ufonts.com_arial-condensed-bold.woff') format('woff'), 
+url('font/ufonts.com_arial-condensed-bold.ttf') format('truetype'), 
+url('font/ufonts.com_arial-condensed-bold.otf') format('opentype'),
+url('font/ufonts.com_arial-condensed-bold.eot') format('embedded-opentype');
+}
+
+@font-face {
+font-family: 'centurygothicbold';
+src : local('centurygothicbold'), 
+url('font/GOTHICB.woff') format('woff'), 
+url('font/GOTHICB.ttf') format('truetype'), 
+url('font/GOTHICB.otf') format('opentype'),
+url('font/GOTHICB.eot') format('embedded-opentype');
+}
+
+@font-face {
+font-family: 'fradm';
+src : local('fradm'), 
+url('font/fradm.woff') format('woff'), 
+url('font/fradm.ttf') format('truetype'), 
+url('font/fradm.otf') format('opentype'),
+url('font/fradm.eot') format('embedded-opentype');
+}
+
+.igwell
 {
+	min-height:20px;
+	padding:20px;
+	margin-bottom:20px;
+	margin-top : 20px;
+	background-color : #dde8ee;
+}
+
+
+.igwell_nofill
+{
+	min-height:20px;
+	margin-bottom:20px;
+	margin-top : 20px;
+	margin-left: 20px;
+
+}
+
+.igwell_nofill_gm
+{
+	min-height:20px;
+	margin-bottom:20px;
+	margin-top : 20px;
+	margin-left: 20px;
+	background-color : white;
+
+}
+
+.round
+{
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 0 !important;
+	border-radius: 10px;
+}
+
+.prpty_info
+{
+	position:relative;
+	margin-top: 20px;
+	height:570px;
 	background-repeat:no-repeat;
 	background-size:100%;
-	padding-bottom:50px;
 }
+
+.age_built_img
+{
+	height:300px;
+	width:313px;
+	float:right;
+
+}
+
+.bedroom_img
+{
+	height:87px;
+	width:108px;
+
+}
+
+.section_break_img
+{
+	height:14px;
+	width:180px;
+
+}
+
+.landsize_txt_img 
+{
+	height:83px;
+	width:300px;
+}
+
+.landshape_txt_img 
+{
+	height:119px;
+	width:300px;
+}
+
+.bathroom_img
+{
+	height:136px;
+	width:100px;
+
+}
+
+.parking_img
+{
+	height:68px;
+	width:100px;
+
+}
+
+.tax_img
+{
+	height:78px;
+	width:178px;
+
+}
+
+.calc_img
+{
+	height:172px;
+	width:140px;
+
+}
+
+
+
+.age_built
+{
+	background-repeat:no-repeat;
+	background-size:60%;
+	margin-top: 20px;
+	height:313px;
+	background-position:right top;
+
+}
+
+
+.age_built_hdr_1stline
+{
+	padding-top:60px;
+	padding-left:220px;
+	font-size:35px;
+	color:white;
+}
+
+.age_built_hdr_2ndline
+{
+	padding-left:220px;
+	font-size:35px;
+	margin-bottom:40px;
+	color:white;
+}
+
+
+.age_built_txt
+{
+	padding-left:270px;
+	font-size:80px;
+	color:white;
+}
+
+.taxes
+{
+	position:relative;
+	margin-top: 20px;
+	height:550px;
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+
+
+
+
+.tax_text
+{
+	font-size:60px;
+	color:red;
+	font-family:"helveticaneueltstd";
+}
+
+#google_map{
+	width: 370px; 
+	height: 260px;
+}
+
+
+
+.age_text
+{
+	padding-top:120px;
+	padding-bottom:20px;
+	padding-left:120px;
+	font-size:35px;
+	color:white;
+	font-family:"helveticaneueltstd";
+}
+
+.prpty_type_hdr
+{
+	padding-top:40px;
+	padding-left:20px;
+	font-size:40px;
+	color:red;
+}
+
+.property_style_text
+{
+	padding-top:5px;
+	padding-bottom:20px;
+	padding-left:180px;
+	font-size:20px;
+	color:white;
+}
+
+.basement_text
+{
+	padding-top:240px;
+	padding-left:35px;
+	font-size:35px;
+	color:white;
+	font-family:"acb";
+}
+
+
+.heating_text
+{
+	padding-top:40px;
+	padding-bottom:20px;
+	padding-left:190px;
+	font-size:20px;
+	color:white;
+	font-family:"acb";
+}
+
 
 .ig_main
 {
 	margin : 0;
 }
 
-.header-color
-{
-	color : blue;
-} 
 
-.common-header
-{
-	color : white;
-	background-color : #7DB8C4;
-	width:100px;
-	padding : 0;
-	line-height:15px;
-	margin-bottom:20px;
-}
-
-.centre
+.center
 {
 	text-align : center;
 }
 
-.round
+.address_large
 {
-	-webkit-border-radius: 25px;
-	-moz-border-radius: 0 !important;
-	border-radius:25px;
+	font-size:48px;
+	font-family:"centurygothicbold";
 }
 
-.igwell
+.address_medium
 {
-	min-height:20px;
-	padding:19px;
-	margin-bottom:20px;
-	margin-top : 20px;
-	border : 2px #4c4c4c dashed;
-	background-color : white;
-}
-	.tax-icon
-	{
-		width : 150px;
-		height : 50px;
-		margin-bottom:35px;
-	}
-
-	.tax-header
-	{
-		font-size : 20px;
-		color : #00FFFF;
-	}
-
-
-.marginer
-{
-	width:260px;
+	font-size:24pt;
+	font-family:"centurygothicbold";
 }
 
-.icon
+
+.landsize_txt
 {
-	width : 90px;
-	height : 70px;
+	font-family:fradm;
+	font-size:50px;
 }
 
-.small_crown
+
+
+.numbers_medium
 {
-	width:40px;
-	height : 20px;	
+	text-align: center;
+	font-size:40px;
 }
 
-.xlarge
+
+.feature_txt
 {
-	font-size:70px;
-	margin-left:-50px;
+	font-size:20px;
+	font-family:fradm;
 }
 
-.tilt
+.feature_header
 {
-	-moz-transform: scale(1) rotate(10deg);
-	-webkit-transform: scale(1) rotate(10deg);
-	-o-transform: scale(1) rotate(10deg);
-	-ms-transform: scale(1) rotate(10deg);
-	transform: scale(1) rotate(10deg);
+	margin-top:10px;
+	font-size:20px;
+	color:red;
+	font-family:helveticaneueltstd;
 }
 
-.premium_quality
-{
-	width:230px;
-	height:100px;
-	margin-left:20px;
-	margin-bottom : 20px;
-}
 
-.age_built
+.price_xlarge
 {
-	position:relative;
-	left:-70px;
-	bottom:-30px;
-	width:250px;
-	height:120px;
-	background-repeat:no-repeat;
-	background-size:100%;
-}
-
-.age
-{
-	padding-top:40px;
-	padding-bottom:20px;
-	font-size:35px;
-}
-
-.features
-{
-	width: 160px !important;
-	word-wrap: break-word;
-}
-
-.address
-{
-	background-repeat:no-repeat;
-	background-size:100%;
-	color:white;
-	padding-bottom:220px;
-	padding-top: 35px;
-}
-
-#google_map{
-	width: 260px; 
-	height: 220px;
+	font-size:76pt;
+	margin-left:10px;
+	font-family:"acb";
+	text-align:right;
 }
