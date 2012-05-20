@@ -66,20 +66,20 @@ You must follow our standards in order to be compatible with our system.
 
 **Directory Structure**
 
-	* /kit : All your assets such as images, fonts, and style.css belong here.
-	* /designs : Designs in PDF format for reference
-	* /lib : scripts/css that NestMob runs on (it is very important that you do not 
-	  modify/delete any files inside /lib directory).
-	* /themes : Themes that NestMob has deployed / is developing. Usually, the original 
-	  design is contained in /designs directory in PDF format.
-	* app.html : executable webapp. Contains a sample template initially.
+	/kit : All your assets such as images, fonts, and style.css belong here.
+	/designs : Designs in PDF format for reference
+	/lib : scripts/css that NestMob runs on (it is very important that you do not 
+	       modify/delete any files inside /lib directory).
+	/themes : Themes that NestMob has deployed / is developing. Usually, the original 
+	          design is contained in /designs directory in PDF format.
+	app.html : executable webapp. Contains a sample template initially.
 
 **Instruction**
 
 1. Open up app.html with a browser and a text editor of your choice.
 
 2. The script tag #ig-default contains a sample template. Please review carefully how images paths are set, how gallery is embedded, and how google map can be embedded.
-	* All image paths are required to be in {{theme_path}}img/IMAGE-NAME.EXT where IMAGE-NAME is the name of the image and EXT is the image type.
+	* All image paths are required to be in ```{{theme_path}}img/IMAGE-NAME.EXT``` where IMAGE-NAME is the name of the image and EXT is the image type.
 	* To embed a gallery, all you have to do is to place ```<div id="ig-gallery"></div>``` tag where appropriate and add css rules as needed.
 	* Embeding Google Map is also very simple. Place ```<div id="google_map"></div>``` tag where appropriate and set the preferred width and the height.
 
@@ -88,7 +88,7 @@ You must follow our standards in order to be compatible with our system.
 4. Within style.css, you can review how images and fonts are loaded.
 
 5. Once the review is done, delete the followings 
-	* app.html : Everything inside #ig-default tag
+	* app.html : Everything inside ```#ig-default``` tag
 	* style.css : Contents inside the file. As you will define your own css rules here. 
 	* Every image files in kit/img.
 	* Every fonts in kit/fonts
