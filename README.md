@@ -57,12 +57,13 @@ You must follow our standards in order to be compatible with our system.
 * Currently, no javascripts are allowed in NestMob templates.
 
 
+***
 
 ## Using app.html
 
+
 **App.html is a local webapp forked from NestMob's infograph editor which allows the designers and coders to test their templates before submission.**
 
-***
 
 **Directory Structure**
 
