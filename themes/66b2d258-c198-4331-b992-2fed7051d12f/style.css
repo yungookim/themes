@@ -1,0 +1,139 @@
+.background
+{
+	background-repeat:no-repeat;
+	background-size:100%;
+	padding-bottom:50px;
+}
+
+.ig_main
+{
+	margin : 0;
+}
+
+.header-color
+{
+	color : blue;
+} 
+
+.common-header
+{
+	color : white;
+	background-color : #7DB8C4;
+	width:100px;
+	padding : 0;
+	line-height:15px;
+	margin-bottom:20px;
+}
+
+.centre
+{
+	text-align : center;
+}
+
+.round
+{
+	-webkit-border-radius: 25px;
+	-moz-border-radius: 0 !important;
+	border-radius:25px;
+}
+
+.igwell
+{
+	min-height:20px;
+	padding:19px;
+	margin-bottom:20px;
+	margin-top : 20px;
+	border : 2px #4c4c4c dashed;
+	background-color : white;
+}
+	.tax-icon
+	{
+		width : 150px;
+		height : 50px;
+		margin-bottom:35px;
+	}
+
+	.tax-header
+	{
+		font-size : 20px;
+		color : #00FFFF;
+	}
+
+
+.marginer
+{
+	width:260px;
+}
+
+.icon
+{
+	width : 90px;
+	height : 70px;
+}
+
+.small_crown
+{
+	width:40px;
+	height : 20px;	
+}
+
+.xlarge
+{
+	font-size:70px;
+	margin-left:-50px;
+}
+
+.tilt
+{
+	-moz-transform: scale(1) rotate(10deg);
+	-webkit-transform: scale(1) rotate(10deg);
+	-o-transform: scale(1) rotate(10deg);
+	-ms-transform: scale(1) rotate(10deg);
+	transform: scale(1) rotate(10deg);
+}
+
+.premium_quality
+{
+	width:230px;
+	height:100px;
+	margin-left:20px;
+	margin-bottom : 20px;
+}
+
+.age_built
+{
+	position:relative;
+	left:-70px;
+	bottom:-30px;
+	width:250px;
+	height:120px;
+	background-repeat:no-repeat;
+	background-size:100%;
+}
+
+.age
+{
+	padding-top:40px;
+	padding-bottom:20px;
+	font-size:35px;
+}
+
+.features
+{
+	width: 160px !important;
+	word-wrap: break-word;
+}
+
+.address
+{
+	background-repeat:no-repeat;
+	background-size:100%;
+	color:white;
+	padding-bottom:220px;
+	padding-top: 35px;
+}
+
+#google_map{
+	width: 260px; 
+	height: 220px;
+}
