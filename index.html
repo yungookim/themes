@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Themes by yungookim</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Themes</h1>
+        <p>Themes for nestmob</p>
+        <p class="view"><a href="https://github.com/yungookim/themes">View the Project on GitHub <small>yungookim/themes</small></a></p>
+        <ul>
+          <li><a href="https://github.com/yungookim/themes/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/yungookim/themes/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/yungookim/themes">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>Themes for Nestmob</h1>
+
+<p>Source codes for various themes offered by Nestmob.</p>
+
+<h1>How to submit your work</h1>
+
+<ul>
+<li>You first need to get an theme id, by sending us an email at <a href="mailto:kyu.lee@nestmob.com">kyu.lee@nestmob.com</a>
+</li>
+<li>Fork this project, then create a folder named as <code>theme_id</code>, under <code>/themes</code> folder</li>
+<li>Upload all necessary files, including all images, fonts, HTML, CSS under <code>/themes/[theme_id]</code> following our standards outlined below</li>
+<li>Submit a pull request</li>
+</ul><p>You will be able to test your themes once we deploy it on our servers(will be done periodically, and we will notify you), for you to test it out.</p>
+
+<p>Once the theme is complete, tested and verified, it will become public for other users.</p>
+
+<h1>Coding Standards</h1>
+
+<p>You must follow our standards in order to be compatible with our system.</p>
+
+<h2>Directory Structure</h2>
+
+<h2>Variables</h2>
+
+<ul>
+<li>Google Map - At render, an element with id="google_map" will be filled with a google map. All you have to do is define the width and height and we take care of the rest.</li>
+</ul><h2>Images</h2>
+
+<h2>Fonts</h2>
+
+<h2>CSS</h2>
+
+<ul>
+<li><p>Twitter's Bootstrap(v2.0.3) is enabled by default.</p></li>
+<li>
+<p>Every css classes have to have "ig-" prepended to their names to avoid any possible conflict with NestMob's classes. </p>
+
+<ul>
+<li>eg. .ig-foo instead of .foo</li>
+</ul>
+</li>
+<li><p>No override of Bootstrap class is allowed.</p></li>
+<li>
+<p>In case you need to override a class from Bootstrap, simply use !important delarations (Your !important overrides our's).</p>
+
+<div class="highlight">
+<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"well ig-extra"</span><span class="nt">&gt;</span> content <span class="nt">&lt;/div&gt;</span>
+</pre>
+</div>
+
+
+<div class="highlight">
+<pre><span class="nc">.ig-extra</span><span class="p">{</span>
+<span class="k">width</span><span class="o">:</span><span class="m">220px</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="k">background-color</span><span class="o">:</span><span class="nb">red</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</pre>
+</div>
+</li>
+</ul><h2>Javascripts</h2>
+
+<ul>
+<li>Currently, no javascripts are allowed in NestMob templates.</li>
+</ul><hr><h2>Using app.html</h2>
+
+<p><strong>App.html is a local webapp forked from NestMob's infograph editor which allows the designers and coders to test their templates before submission.</strong></p>
+
+<p><strong>Directory Structure</strong></p>
+
+<pre><code>/kit : All your assets such as images, fonts, and style.css belong here.
+/designs : Designs in PDF format for reference
+/lib : scripts/css that NestMob runs on (it is very important that you do not 
+       modify/delete any files inside /lib directory).
+/themes : Themes that NestMob has deployed / is developing. Usually, the original 
+          design is contained in /designs directory in PDF format.
+app.html : executable webapp. Contains a sample template initially.
+</code></pre>
+
+<p><strong>Instruction</strong></p>
+
+<ol>
+<li><p>Open up app.html with a browser and a text editor of your choice.</p></li>
+<li>
+<p>The script tag #ig-default contains a sample template. Please review carefully how images paths are set, how gallery is embedded, and how google map can be embedded.</p>
+
+<ul>
+<li>All image paths are required to be in <code>{{theme_path}}img/IMAGE-NAME.EXT</code> where IMAGE-NAME is the name of the image and EXT is the image type.</li>
+<li>To embed a gallery, all you have to do is to place <code>&lt;div id="ig-gallery"&gt;&lt;/div&gt;</code> tag where appropriate and add css rules as needed.</li>
+<li>Embeding Google Map is also very simple. Place <code>&lt;div id="google_map"&gt;&lt;/div&gt;</code> tag where appropriate and set the preferred width and the height.</li>
+</ul>
+</li>
+<li><p>Review the contents in /kit directory which contains all the assets required for the sample. Note that style.css file is required and will be automatically loaded by the app.html.</p></li>
+<li><p>Within style.css, you can review how images and fonts are loaded.</p></li>
+<li>
+<p>Once the review is done, delete the followings </p>
+
+<ul>
+<li>app.html : Everything inside <code>#ig-default</code> tag</li>
+<li>style.css : Contents inside the file. As you will define your own css rules here. </li>
+<li>Every image files in kit/img.</li>
+<li>Every fonts in kit/fonts</li>
+</ul>
+</li>
+<li><p>You can do all your regular html stuff inside #ig-default tag in app.html. All css stuff in kit/style.css. All images inside kit/img. All font files in kit/font. Define fonts in kit/style.css.</p></li>
+<li><p>Be creative.</p></li>
+</ol><p><strong>Parameters</strong></p>
+
+<p>important : it is very important that "&amp;" without quotation is prepended to Description and Feature parameters.</p>
+
+<pre><code>Price                {{price}}  
+Rooms                {{rooms}}  
+Description*         {{&amp;description}} 
+Features*            {{&amp;feature}}  
+Street 1             {{street_1}}  
+Street 2             {{street_2}}  
+City                 {{city}} 
+Postal Code          {{postal}}  
+Province/state       {{province}}  
+Country              {{country}} 
+storey               {{storey}}  
+Property Type        {{property_type}}  
+Property Style       {{property_style}} 
+Rooms                {{rooms}} 
+Land Size X          {{land_size_x}}
+Land Size Y          {{land_size_y}}
+# of Bath Rooms      {{bathrooms}}
+Parking              {{parking}}
+Age/year Built       {{age}}
+Heating              {{heating}}
+Basement             {{basement}} 
+Tax                  {{tax}} 
+Facing               {{facing}}
+Contact              {{contact}} 
+</code></pre>
+
+<p>Think of below block as a loop. Basically, for N number of room details (eg. Master Bedroom, 2 floor, 20ft by 20ft is one set of room detail), below block will append to itself N times.</p>
+
+<pre><code>{{#room_details}}
+    {{room-name}}                 //Name of the room eg. Master Bedroom, Jr Bed.
+    {{room-storey}}               //Floor that the room is on.
+    {{room-dimension-x-ft}}       //Length of the room in ft.
+    {{room-dimension-y-ft}}       //Width of the room in ft
+    {{room-dimension-x-m}}        //Length of the room in m.
+    {{room-dimension-y-m}}        //Width of the room in m.
+{{/room_details}}
+</code></pre>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/yungookim">yungookim</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+    
+  </body>
+</html>
