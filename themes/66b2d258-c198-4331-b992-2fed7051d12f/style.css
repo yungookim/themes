@@ -165,7 +165,7 @@
 {
 	font-size: 35px;
 	color: #e24f2f;
-	font-weight: lighter;
+	font-weight: 300;
 }
 
 .land_icon
@@ -197,7 +197,7 @@
 .style_cat
 {
 	font-size: 21px;
-	font-weight: lighter;
+	font-weight: 300;
 	color: #e6aa21;	
 	line-height: 125%;
 }
@@ -229,14 +229,14 @@
 	font-size: 40px;
 	margin-top: 25px;
 	margin-bottom: 30px;
-	font-weight: lighter;
+	font-weight: 300;
 }
 
 .tax_value
 {
 	color: #60a0cd;
 	font-size: 65px;
-	font-weight: lighter;
+	font-weight: 300;
 }
 
 
