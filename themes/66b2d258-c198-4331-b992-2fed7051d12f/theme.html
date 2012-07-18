@@ -1,123 +1,140 @@
-<html>
-<head>
-	<link href="default_assets/css/ext/bootstrap/bootstrap-min.css" rel="stylesheet">
-	<link href="default_assets/css/property_viewer.css" rel="stylesheet">
-	<link href="style.css" rel="stylesheet">
-</head>
-<body>
-<div class="row" id="main_container">
-	<div class="row ig-container">	
-		<div id="infograph_container" class="span12">
-<!-- DO NOT MODIFY ABOVE -->
-			
-<div class="row ig_main background" style="background-size:100% 100%;background-image:url('img/background.jpg');">
+<div class="row ig_main background">
 	
 	<!-- Thumbnail Gallery BEGIN -->
 	<div id="ig-gallery" style="padding-left:20px;"></div>
 	<!-- Thumbnail Gallery END -->
 
-	<div class="span12" style="margin-left:35px;">
+	<div class="span12">
 		<div class="row">
-			<div class="span3 marginer">
-				<div class="igwell col round">
-					<img src="img/tax_icon.png" class="tax-icon">
-					<h1 class="centre"><!--{{tax}} BEGIN-->$3000<!--{{tax}} END--></h1>
-				</div>
-
-				<div class="igwell round" >
-					<h3 class="common-header">Basement:</h3>
-					<h1 class="features">Finished<!--{{basement}}--></h1>
-					<br>	
-					<h3 class="common-header">Style:</h3>
-					<h1 class="features">Detached<!--{{property_type}}--></h1>
-					<h1 class="features">2<!--{{storey}}--> storey</h1>
-					<br>
-					<h3 class="common-header">Heating</h3>
-					<h1 class="features">Forced Air<!--{{heating}}--></h1>
-					<br>
+			
+			<div class="span5" style="position:relative;">
+				
+				<div id="line1" />
+				<div id="line3" />
+				<div id="line6" />
+				
+				<div class="igwell">
+					<img src="{{theme_path}}img/property_type.png" class="property_type-icon">
+					<div class="property_type-header">{{property_style}}</div>
+					<div style="clear:both;" />
+					<h1 class="price-header">$ {{price}}</h1>
 				</div>
 		
-				<div class="igwell round">
-					<h3 class="common-header">Other Stuff:</h3>
-					<p>this house is awesome buy now<!--{{description}}--></p>
-				</div>
-			</div>
-
-			<div class="span4">
-				<div class="igwell round">
-					<h1>
-						<img src="img/bedroom_icon.png" class="icon">
-						3 + 1<!--{{rooms}}-->
-					</h1>
-					<h1>
-						<img src="img/bathroom_icon.png" class="icon">
-						2 + 1<!--{{bathrooms}}-->
-					</h1>
-
-					<h1>
-						<img src="img/parking_icon.png" class="icon">
-						2<!--{{parking}}-->
-					</h1>
+				<div class="igwell rooms_outer">
+					<div class="rooms_inner">
+						<h1 class="room-header">
+							<img src="{{theme_path}}img/bedrooms.png" class="room_icon">
+							{{rooms}}
+						</h1>
+						<h1 class="room-header">
+							<img src="{{theme_path}}img/bathrooms.png" class="room_icon">
+							{{bathrooms}}
+						</h1>
+						<h1 class="room-header">
+							<img src="{{theme_path}}img/parking.png" class="room_icon">
+							{{parking}}
+						</h1>
+					</div>
 				</div>
 
-				<!-- Google Map Begin -->
+				<div class="igwell description-block">
+					<div id="line8" />
+					<h1 class="description-header">EXTRA DESCRIPTIONS</h1>
+					<div class="description-content">
+						<p>{{description}}</p>
+					</div>
+				</div>
+				
 				<div id="google_map" class="igwell"></div>
-				<!-- Google Map End -->
-
-				<div class="address centre" style="background-image:url('img/address.png');">
-					<h3><i>12 Yonge Street<!--{{street_1}}--></i></h3>
-					<br>
-					<h1>Toronto<!--{{city}}--></h1>
-					<h4>J31 F2V<!--{{postal}}-->, Canada<!--{{country}}--></h4>
-
-				</div>
-
+				
 			</div>
 
-			<div class="span3" style="width:260px;">
-				<div class="igwell round">
-					<h3 class="common-header">Extras:</h3>
-					<p>Some other descriptions, oiwej foiweh foawie hfwe, fawe,fj awef a,wef awef awefaef
-						awef jawef,awef a,wea ,we fa,wea ,wefa f h ailwhefl aweflaweawea fawef, awefiawhfawha w
-						fawefaw elfalw efehw w;ef aw;efa,wf awefawpwiueal iefualw ifug aifugasdlfjasldfia h
-						<!--{{{description}}}--></p>
-				</div>
-		
-				<div class="igwell round">
-					<h3 class="common-header">Land Size:</h3>
-					<h1>120<!--{{land_size_x}}--> X <br>80<!--{{land_size_y}}--> Feet</h1>
-				</div>
-
-				<div class="igwell round">
-					<img src="img/small_crown.png" class="small_crown">
-					<p>Some more description<!--{{description}}--></p>
-				</div>
-
-				<div class="igwell round">
-					<h3 class="common-header">Features:</h3>
-					<p>Some more description<!--{{description}}--></p>
-				</div>
-
-				<img class="premium_quality tilt" src="img/premium_quality.png" >
+			<div class="span7" style="margin-left:0px; position:relative;">
 				
-				<br><br>	
+				<div id="line2" />
+				<div id="line4" />
+				<div id="line5" />
+				<div id="line7" />
 				
-				<h1 class="xlarge tilt">$630,000<!--{{price}}--></h1>
-
-				<br><br>
-
-				<div class="age_built" style="background-image:url('img/built_year.png');">
-					<h1 class="age centre">13<!--{{age}}--></h1>
+				<div class="row">
+				<div class="span4 offset3">
+					<div class="addr_wire"></div>
+					<div class="addr_sign">
+						<h1>{{street_1}}</h1>
+						<h3>{{city}}, {{province}}, {{postal}}</h3>
+					</div>
 				</div>
+				</div>
+				
+				<div class="span2 offset1 age">
+					<div class="age_inner">
+						<h3>Age/Yr.Built</h3>
+						<h1 class="age_number">{{age}}</h1>
+					</div>
+				</div>
+				
+				<div class="row">
+				<div class="span4">
+					<div class="style">
+					<h2 class="style_cat">Style: 
+						<span class="style_val">{{storey}} Storey</span>
+					</h2>
+					<h2 class="style_cat">Basement: 
+						<span class="style_val">{{basement}}</span>
+					</h2>
+					<h2 class="style_cat">Heating: 
+						<span class="style_val">{{heating}}</span>
+					</h2>
+					</div>
+				</div>
+				<div class="span3 land">
+					<h1 class="land_header">Land Size:</h1>
+					<img src="{{theme_path}}img/land_size.png" class="land_icon">
+					<h3 class="land_size">{{land_size_x}} x {{land_size_y}} Feet</h3>
+				</div>
+				</div>
+				
+				<div class="row" style="height:80px;" />
+				
+				<div class="row">
+				<div class="span4 tax">
+					<img src="{{theme_path}}img/tax.png" class="tax_icon">
+					<h1 class="tax_header">Taxes:</h1>
+					<h1 class="tax_value">${{tax}}</h1>
+				</div>
+				<div class="span3 features">
+					<h3 class="features_header">Features:</h3>
+					<h1 class="features_content">{{&feature}}</h1>
+				</div>
+				</div>
+				
+				<div class="row" style="height:60px;float:left;" />
+				
+				<div class="extra_info_container">
+					<img src="{{theme_path}}img/bullet.png" class="extra_info_bullet">
+					<div class="extra_info">
+						<h3>Facing</h3>
+						<p>{{facing}}</p>
+					</div>
+					<img src="{{theme_path}}img/bullet.png" class="extra_info_bullet">
+					<div class="extra_info">
+						<h3>Rooms</h3>
+						{{#room_details}}
+						<p>- {{room-name}}, on {{room-storey}} floor : 
+							{{room-dimension-x-ft}}ft. x {{room-dimension-y-ft}}ft. 
+							({{room-dimension-x-m}}m x {{room-dimension-y-m}} m)</p>
+						{{/room_details}}
+					</div>
+					<img src="{{theme_path}}img/bullet.png" class="extra_info_bullet">
+					<div class="extra_info">
+						<h3>Contact</h3>
+						<p>{{contact}}</p>
+					</div>
+				</div>
+				
 			</div>
 			
 		</div> <!-- .row -->
 	</div> <!-- .span12 -->
 </div> <!-- .ig_main -->
 
-<!-- DO NOT MODIFY BELOW -->
-		</div>
-	</div>
-</div>
-</body>
-</html>
