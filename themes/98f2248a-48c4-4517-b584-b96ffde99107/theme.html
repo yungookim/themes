@@ -1,0 +1,123 @@
+<div class="row ig_main background" style="background-size:100% 100%;background-image:url('/static/themes/98f2248a-48c4-4517-b584-b96ffde99107/background.jpg');">
+	
+	<div id="ig-gallery" style="padding-left:20px;">
+	<!-- This is where the thumbnails of photos go in-->	
+	</div>
+
+<div class="span12" style="margin-left:35px;">
+
+
+	<div class="row">
+
+					<div class="span3 marginer">
+						<div class="igwell col round">
+							<img src="/static/themes/98f2248a-48c4-4517-b584-b96ffde99107/tax_icon.png" class="tax-icon">
+							<h1 class="centre">${{tax}}</h1>
+						</div>
+
+						<div class="igwell round">
+							<h1 class="">
+							<img src="/static/themes/98f2248a-48c4-4517-b584-b96ffde99107/small_crown.png" class="small_crown">
+							{{property_type}}</h1>
+						</div>
+
+						<div class="igwell round" >
+							<h3 class="common-header">Basement:</h3>
+							<h1 class="features">{{basement}}</h1>
+							<br>	
+							<h3 class="common-header">Style:</h3>
+							<h1 class="features">{{property_style}}</h1>
+							<h1 class="features">{{storey}} storey</h1>
+							<br>
+							<h3 class="common-header">Heating</h3>
+							<h1 class="features">{{heating}}</h1>
+							<br>
+						</div>
+						
+						<div class="igwell round">
+							<h3 class="common-header">Description:</h3>
+							<p>{{description}}</p>
+						</div>
+
+					</div>
+
+					<div class="span4" style="margin-left:40px;">
+						<div class="igwell round">
+							<h1>
+								<img src="/static/themes/98f2248a-48c4-4517-b584-b96ffde99107/bedroom_icon.png" class="icon">
+								<span class="font-alger">{{rooms}}</span>
+							</h1>
+							<h1>
+								<img src="/static/themes/98f2248a-48c4-4517-b584-b96ffde99107/bathroom_icon.png" class="icon">
+								<span class="font-alger">
+								{{bathrooms}}
+								</span>
+							</h1>
+
+							<h1>
+								<img src="/static/themes/98f2248a-48c4-4517-b584-b96ffde99107/parking_icon.png" class="icon">
+								<span class="font-alger">
+								{{parking}}
+								</span>
+							</h1>
+						</div>
+
+						<div id="google_map" class="igwell" style="margin:0;padding:0;"></div>
+
+
+						<div class="address centre" style="background-image:url('/static/themes/98f2248a-48c4-4517-b584-b96ffde99107/address.png');">
+							<h3><i>{{street_1}}</i></h3>
+							<br>
+							<h1 class="font-minion">{{city}}</h1>
+							<h4 class="font-minion">{{postal}}, {{country}}</h4>
+
+						</div>
+
+					</div>
+
+
+					<div class="span3" style="margin-left:40px; width:260px;">
+						<div class="igwell round">
+							<h3 class="common-header">Rooms</h3>
+							{{#room_details}}
+							<p>{{room-name}}, on {{room-storey}} floor  : 
+							<br> {{room-dimension-x-ft}}ft. x {{room-dimension-y-ft}}ft. ({{room-dimension-x-m}}m x {{room-dimension-y-m}}m)</p>
+							{{/room_details}}
+						</div>
+						
+						<div class="igwell round">
+							<h3 class="common-header">Land Size:</h3>
+							<h1>{{land_size_x}} X <br>{{land_size_y}} Feet</h1>
+						</div>
+
+						<div class="igwell round">
+							<h3 class="common-header">Facing</h3>
+							<h1 class="font-alger" style="font-size:4em;">{{facing}}</h1>
+
+						</div>
+
+						<div class="igwell round">
+							<h3 class="common-header">Features:</h3>
+							<p>{{&feature}}</p>
+						</div>
+
+						<img class="premium_quality tilt" src="/static/themes/98f2248a-48c4-4517-b584-b96ffde99107/premium_quality.png" >
+						<br><br>	
+						<h1 class="xlarge tilt font-alger" style="">${{price}}</h1>
+
+						<br><br>
+
+
+						<div class="age_built" style="background-image:url('/static/themes/98f2248a-48c4-4517-b584-b96ffde99107/built_year.png');">
+							<h1 class="age centre">{{age}}</h1>
+						</div>
+
+
+					</div>
+
+
+	</div>
+
+</div>
+
+</div>
