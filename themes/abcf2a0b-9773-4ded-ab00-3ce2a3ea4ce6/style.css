@@ -29,7 +29,7 @@ url('font/GOTHICB.eot') format('embedded-opentype');
 @font-face {
 font-family: 'fradm';
 src : local('fradm'), 
-url('font/FRADM	woff') format('woff'), 
+url('font/FRADM.woff') format('woff'), 
 url('font/FRADM.ttf') format('truetype'), 
 url('font/FRADM.otf') format('opentype'),
 url('font/FRADM.eot') format('embedded-opentype');
