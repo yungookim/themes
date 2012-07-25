@@ -29,21 +29,21 @@ url('font/GOTHICB.eot') format('embedded-opentype');
 @font-face {
 font-family: 'fradm';
 src : local('fradm'), 
-url('font/fradm.woff') format('woff'), 
-url('font/fradm.ttf') format('truetype'), 
-url('font/fradm.otf') format('opentype'),
-url('font/fradm.eot') format('embedded-opentype');
+url('font/FRADM.woff') format('woff'), 
+url('font/FRADM.ttf') format('truetype'), 
+url('font/FRADM.otf') format('opentype'),
+url('font/FRADM.eot') format('embedded-opentype');
 }
 
 .igwell
 {
-	min-height:20px;
+ 	min-height:20px;
 	padding:20px;
 	margin-bottom:20px;
 	margin-top : 20px;
 	background-color : #dde8ee;
 }
-
+			
 
 .igwell_nofill
 {
@@ -80,9 +80,10 @@ url('font/fradm.eot') format('embedded-opentype');
 	background-size:100%;
 }
 
+
 .age_built_img
 {
-	height:300px;
+	height:250px;
 	width:313px;
 	float:right;
 
@@ -110,8 +111,8 @@ url('font/fradm.eot') format('embedded-opentype');
 
 .landshape_txt_img 
 {
-	height:119px;
-	width:300px;
+	height:77px;
+	width:280px;
 }
 
 .bathroom_img
@@ -149,7 +150,7 @@ url('font/fradm.eot') format('embedded-opentype');
 	background-repeat:no-repeat;
 	background-size:60%;
 	margin-top: 20px;
-	height:313px;
+	height:250px;
 	background-position:right top;
 
 }
@@ -167,15 +168,15 @@ url('font/fradm.eot') format('embedded-opentype');
 {
 	padding-left:220px;
 	font-size:35px;
-	margin-bottom:40px;
+	margin-bottom:20px;
 	color:white;
 }
 
 
 .age_built_txt
 {
-	padding-left:270px;
-	font-size:80px;
+	padding-left:200px;
+	font-size:70px;
 	color:white;
 }
 
@@ -199,7 +200,7 @@ url('font/fradm.eot') format('embedded-opentype');
 }
 
 #google_map{
-	width: 370px; 
+	width: 340px; 
 	height: 260px;
 }
 
@@ -207,9 +208,9 @@ url('font/fradm.eot') format('embedded-opentype');
 
 .age_text
 {
-	padding-top:120px;
+	padding-top:100px;
 	padding-bottom:20px;
-	padding-left:120px;
+	padding-left:100px;
 	font-size:35px;
 	color:white;
 	font-family:"helveticaneueltstd";
@@ -218,14 +219,14 @@ url('font/fradm.eot') format('embedded-opentype');
 .prpty_type_hdr
 {
 	padding-top:40px;
-	padding-left:20px;
-	font-size:40px;
+	padding-left:10px;
+	font-size:30px;
+
 	color:red;
 }
 
 .property_style_text
 {
-	padding-top:5px;
 	padding-bottom:20px;
 	padding-left:180px;
 	font-size:20px;
@@ -234,7 +235,7 @@ url('font/fradm.eot') format('embedded-opentype');
 
 .basement_text
 {
-	padding-top:240px;
+	padding-top:220px;
 	padding-left:35px;
 	font-size:35px;
 	color:white;
@@ -267,6 +268,7 @@ url('font/fradm.eot') format('embedded-opentype');
 .address_large
 {
 	font-size:48px;
+	padding-bottom:10px;
 	font-family:"centurygothicbold";
 }
 
@@ -314,3 +316,4 @@ url('font/fradm.eot') format('embedded-opentype');
 	font-family:"acb";
 	text-align:right;
 }
+		
